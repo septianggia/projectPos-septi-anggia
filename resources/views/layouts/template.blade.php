@@ -74,7 +74,7 @@
                             alt="User Image">
                     </div>
                     <div class="info">
-                        <a href="#" class="d-block">Safrizal</a>
+                        <a href="#" class="d-block">Septi Anggia</a>
                     </div>
                 </div>
 
@@ -122,7 +122,7 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">
+                                    <a href="{{route('produk.index')}}" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Input Produk</p>
                                     </a>
