@@ -6,6 +6,9 @@ use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\CetakController;
+
+
 
 Route::get('/', function () {
     return view('dashboard',[
@@ -24,5 +27,15 @@ Route::get('login',[LoginController::class,'loginView']);
 Route::post('login',[LoginController::class,'authenticate']);
 Route::get('login',[LoginController::class,'loginView'])->name('login');
 Route::post('logout',[LoginController::class,'logout'])->middleware('auth');
-
+Route::get('penjualan',function(){
+    return view('penjualan.index',[
+        "titlee"=>"Penjualan"
+    ]);
+})->middleware('auth');
+Route::get('order',function(){
+    return view('penjualan.orders',[
+        "title"=>"Order"
+    ]);
+})->middleware('auth');
+Route::get('cetakReceipt',[CetakController::class,'receipt'])->name('cetakReceipt')->middleware('auth');
 
